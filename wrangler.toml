@@ -1,0 +1,12 @@
+# Cloudflare Pages : deploiement depuis un depot Git (recommande)
+#   Build command   : (aucune)
+#   Build output    : public
+#   Functions dir   : functions  (detecte automatiquement)
+#
+# Les variables RESEND_API_KEY, MAIL_TO, MAIL_FROM se renseignent dans
+#   Cloudflare Dashboard > Workers & Pages > votre projet > Settings > Variables.
+# Pour tester en local : npx wrangler pages dev public
+
+name = "questionnaire-site-client"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "public"

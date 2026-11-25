@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Questionnaire de création de site web</title>
+    <meta
+      name="description"
+      content="Questionnaire client en 12 sections pour préparer la création de votre site internet. À la fin, un document Markdown récapitulatif est généré et envoyé."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#111a34" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172e'/%3E%3Cpath d='M9 9h6v14H9zM19 9h4l-2 6 2 8h-4z' fill='%23c9a66b'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#form">Aller au formulaire</a>
+
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">Q</span>
+          <span class="brand-text">
+            <strong id="brandTitle">Questionnaire de création de site web</strong>
+            <small>12 sections · environ 10 minutes · brouillon sauvegardé automatiquement</small>
+          </span>
+        </div>
+        <div class="progress" role="status" aria-live="polite">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-label" id="progressLabel">0 %</span>
+        </div>
+      </div>
+      <nav class="toc" aria-label="Sommaire du questionnaire">
+        <div class="wrap toc-scroll" id="toc"></div>
+      </nav>
+    </header>
+
+    <main class="wrap main">
+      <section class="hero">
+        <h1>Parlez-moi de votre projet</h1>
+        <p class="hero-lead">
+          Ce questionnaire me permet de comprendre votre activité, vos objectifs et vos envies avant notre
+          premier échange. Répondez avec le plus de détails possible : chaque information rend le devis plus juste.
+        </p>
+        <ul class="hero-notes">
+          <li>Les champs marqués d’un <span class="req">*</span> sont obligatoires.</li>
+          <li>Vos réponses sont conservées dans votre navigateur jusqu’à l’envoi : vous pouvez revenir plus tard.</li>
+          <li>À la fin, un document Markdown récapitulatif est généré et envoyé, avec une copie téléchargeable.</li>
+        </ul>
+        <div class="draft" id="draftNotice" hidden>
+          <span>Un brouillon a été restauré.</span>
+          <button type="button" class="link" id="clearDraft">Effacer le brouillon</button>
+        </div>
+      </section>
+
+      <form id="form" novalidate>
+        <div id="sections"></div>
+
+        <div class="submit-zone">
+          <p class="form-error" id="formError" hidden role="alert"></p>
+          <div class="submit-actions">
+            <button type="button" class="btn btn-ghost" id="previewBtn">Aperçu du document</button>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span class="btn-label">Envoyer le questionnaire</span>
+            </button>
+          </div>
+          <p class="submit-note">
+            Vous verrez le récapitulatif exact qui sera envoyé avant validation.
+          </p>
+        </div>
+      </form>
+
+      <section class="success" id="success" hidden aria-live="polite">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h2 id="successTitle">Questionnaire envoyé, merci !</h2>
+        <p id="successText">Votre document est parti par e-mail. Vous pouvez en conserver une copie ci-dessous.</p>
+        <div class="success-actions">
+          <button type="button" class="btn btn-primary" id="downloadBtn">Télécharger le document (.md)</button>
+          <button type="button" class="btn btn-ghost" id="copyBtn">Copier le contenu</button>
+        </div>
+        <pre class="success-preview" id="successPreview"></pre>
+        <button type="button" class="link" id="restartBtn">Remplir un nouveau questionnaire</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>Questionnaire confidentiel — vos réponses ne sont utilisées que pour l’étude de votre projet.</p>
+      </div>
+    </footer>
+
+    <dialog class="dialog" id="previewDialog" aria-labelledby="previewTitle">
+      <div class="dialog-head">
+        <h2 id="previewTitle">Récapitulatif du document</h2>
+        <button type="button" class="dialog-close" id="closePreview" aria-label="Fermer">×</button>
+      </div>
+      <p class="dialog-note">
+        Voici exactement le document Markdown qui sera généré et envoyé. Vérifiez-le, puis confirmez l’envoi.
+      </p>
+      <pre class="dialog-pre" id="previewContent"></pre>
+      <div class="dialog-actions">
+        <button type="button" class="btn btn-ghost" id="previewDownload">Télécharger le .md</button>
+        <button type="button" class="btn btn-ghost" id="previewCopy">Copier</button>
+        <button type="button" class="btn btn-primary" id="confirmSend">Confirmer et envoyer</button>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" hidden role="status"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

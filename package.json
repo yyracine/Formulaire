@@ -1,0 +1,11 @@
+{
+  "name": "questionnaire-site-client",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Formulaire client (questionnaire de creation de site web) qui genere un document Markdown et l'envoie par e-mail.",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "test": "node tools/test-markdown.mjs"
+  }
+}
