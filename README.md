@@ -13,6 +13,9 @@ son document ou vous l'envoyer via un lien `mailto:` prérempli. Rien n'est jama
 Aucune dépendance à l'exécution, aucun build : trois fichiers HTML/CSS/JS et une fonction
 d'envoi compatible **Vercel**, **Netlify** et **Cloudflare Pages**.
 
+> **Reprise de session** : lire [`RESUME.md`](./RESUME.md) (état, configuration, blocages,
+> journal) et [`AGENTS.md`](./AGENTS.md) (consignes de travail).
+
 ---
 
 ## 1. Démarrage local
