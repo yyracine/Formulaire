@@ -2,7 +2,17 @@
 
 > **Fichier de reprise.** À lire au début de chaque session ; à mettre à jour à la fin
 > de chaque session (section « Journal des sessions » + état des tâches).
-> Dernière mise à jour : **2026-11-25**.
+> Dernière mise à jour : **2026-11-25 (fin de session 1)**.
+
+## 0. Reprendre ici (prochaine action exacte)
+
+1. `resend.com/profile` → carte « Votre courriel » → `yaokenny@outlook.com` → « Sauvegarder »,
+   puis **confirmer dans Gmail ET dans Outlook**. (Bloquant pour recevoir sur Outlook.)
+2. `node tools/send-test.mjs` → doit répondre `200 ok` (destinataire `yaokenny@outlook.com`).
+3. Vercel (import GitHub en cours) : nom `formulaire`, preset `Other`, output `public`,
+   variables `RESEND_API_KEY` / `MAIL_TO=yaokenny@outlook.com` / `MAIL_FROM=onboarding@resend.dev`
+   en environnement **Production and Preview** → **Deploy**.
+4. Tester le formulaire depuis l'URL Vercel et vérifier la réception de l'e-mail + pièce jointe.
 
 ---
 
@@ -127,4 +137,7 @@ et envoi vers `yaokenny@outlook.com` (bloqué par le mode test Resend).
 - `git init`, commit `540740c`, poussé sur `yyracine/Formulaire` (main).
 - Bascule de `MAIL_TO` vers `yaokenny@outlook.com` → blocage identifié (mode test Resend).
 - Déploiement Vercel entamé (écran d'import), variables d'environnement en cours de saisie.
-- Création de `RESUME.md` et `AGENTS.md`.
+- Documentation de reprise : `RESUME.md` + `AGENTS.md` (commit `7d801c2`), renvoi depuis
+  `README.md` (commit `379fafb`) — tout est poussé sur `main`.
+- **Fin de session** : rien en cours d'exécution côté machine (serveur local arrêté avec la session).
+  Prochaine action = §0 ci-dessus (changement d'e-mail Resend, puis envoi de contrôle, puis Vercel).
