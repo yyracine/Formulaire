@@ -2,7 +2,7 @@
 
 > **Fichier de reprise.** À lire au début de chaque session ; à mettre à jour à la fin
 > de chaque session (section « Journal des sessions » + état des tâches).
-> Dernière mise à jour : **2026-11-25 (fin de session 1)**.
+> Dernière mise à jour : **2026-11-26 (fin de session 2)**.
 
 ## 0. Reprendre ici (prochaine action exacte)
 
@@ -141,3 +141,13 @@ et envoi vers `yaokenny@outlook.com` (bloqué par le mode test Resend).
   `README.md` (commit `379fafb`) — tout est poussé sur `main`.
 - **Fin de session** : rien en cours d'exécution côté machine (serveur local arrêté avec la session).
   Prochaine action = §0 ci-dessus (changement d'e-mail Resend, puis envoi de contrôle, puis Vercel).
+
+### 2026-11-26 — session 2
+- Reprise : lecture complète de `RESUME.md`, puis contrôle du dépôt.
+- `git status -sb` : arbre propre, `main` aligné sur `origin/main`, dernier commit `e3f591b`.
+- **Aucune modification de code, de configuration ni de test.** Aucun envoi Resend effectué,
+  aucun déploiement tenté : la session s'arrête avant les étapes de §0.
+- §3, §5 et §6 restent valables tels quels (rien de nouveau à consigner).
+- **Reste à faire (inchangé)** : §0 étapes 1 à 4 — e-mail Resend vers `yaokenny@outlook.com`,
+  `node tools/send-test.mjs` → `200 ok`, variables Vercel saisies + Deploy, test de bout en bout.
+- **Fin de session** : rien en cours d'exécution côté machine.
